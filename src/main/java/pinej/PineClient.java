@@ -84,8 +84,8 @@ public class PineClient implements AutoCloseable {
         return (byte) read(address, PineEnums.Command.READ_8);
     }
 
-    public char readChar(int address) {
-        return (char) read(address, PineEnums.Command.READ_16);
+    public short readShort(int address) {
+        return (short) read(address, PineEnums.Command.READ_16);
     }
 
     public int readInt(int address) {
@@ -112,7 +112,7 @@ public class PineClient implements AutoCloseable {
         write(address, value, PineEnums.Command.WRITE_8);
     }
 
-    public void write(int address, char value) {
+    public void write(int address, short value) {
         write(address, value, PineEnums.Command.WRITE_16);
     }
 
